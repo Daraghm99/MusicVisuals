@@ -24,19 +24,32 @@ public class Circular extends Visual {
         
         calculateAverageAmplitude();
         background(0);
-        //noFill();
+        noFill();
         lights();
         stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
         strokeWeight(5);
+        float sphereSize = 25 + (100 * getAmplitude());
+        camera(0, 0, 0, 0, 0, -1, 0, 1, 0);  
         pushMatrix();
-        camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
         translate(0, 0, -300);
         rotateX(angle);
-        rotateZ(angle);
-        float sphereSize = 25 + (100 * getAmplitude());               
+        rotateZ(angle);             
+        sphere(sphereSize);
+        popMatrix();
+        pushMatrix();
+        translate(100, 0, -300);
+        rotateX(angle);
+        rotateZ(angle);             
+        sphere(sphereSize);
+        popMatrix();
+        pushMatrix();
+        translate(-100, 0, -300);
+        rotateX(angle);
+        rotateZ(angle);             
         sphere(sphereSize);
         popMatrix();
         angle += 1;
+
 
     }
 
