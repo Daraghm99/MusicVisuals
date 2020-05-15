@@ -8,6 +8,7 @@ public class RotatingAudioBands extends Visual {
 
     public void settings()
     {
+        //P3D allows 3d in the program
         size(800, 800, P3D);
         println("CWD: " + System.getProperty("user.dir"));
         //fullScreen(P3D, SPAN);
@@ -79,6 +80,7 @@ public class RotatingAudioBands extends Visual {
             pushMatrix();
             translate(x, - h / 2 , z);
             rotateY(theta);
+            //Box drawn at x, y, z coordinates
             box(50, h, 50);
             popMatrix();
         }
