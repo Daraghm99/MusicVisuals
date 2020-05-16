@@ -20,6 +20,7 @@ public class Rectangular extends Visual {
     float bottom = height * 20f;
 
     rectBands bands;
+    Stars stars;
 
     public void settings()
     {
@@ -36,6 +37,7 @@ public class Rectangular extends Visual {
         getAudioPlayer().play();
 
         bands = new rectBands(this);
+        stars = new Stars(this);
     }
 
     public void keyPressed(){
@@ -123,6 +125,7 @@ public class Rectangular extends Visual {
                     angle += 0.01f;
                     
                     bands.render();
+                    stars.render_stars();
                 }
             }
         }else{

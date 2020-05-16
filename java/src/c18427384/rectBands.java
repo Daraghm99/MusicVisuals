@@ -16,13 +16,11 @@ public class rectBands {
         mv.noFill();
         mv.strokeWeight(2);
         mv.lights();
-        float gap = mv.width / (float) mv.getBands().length;
-        //float boxSize = 200 + (200 * mv.getAmplitude());
+        float gap = mv.width * 20f / (float) mv.getBands().length;
         for(int i = 0 ; i < mv.getBands().length; i ++)
         {
             mv.stroke(PApplet.map(mv.getSmoothedAmplitude(), 0, 1, 0, 255), 200, 255);
-            //mv.fill(PApplet.map(i, 0, mv.getBands().length, 255, 0), 255, 255);
-            //mv.rect(i * gap, mv.height, gap,-mv.getSmoothedBands()[i] * 0.2f); 
+            mv.fill(PApplet.map(i, 0, mv.getBands().length, 255, 0), 255, 255); 
             mv.pushMatrix();
             mv.translate(gap * i, ypos, -400);
             mv.box(-mv.getSmoothedBands()[i] * 0.3f);
