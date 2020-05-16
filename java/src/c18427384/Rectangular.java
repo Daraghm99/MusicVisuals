@@ -21,6 +21,7 @@ public class Rectangular extends Visual {
 
     rectBands bands;
     Stars stars;
+    Spiral spiral;
 
     public void settings()
     {
@@ -38,6 +39,7 @@ public class Rectangular extends Visual {
 
         bands = new rectBands(this);
         stars = new Stars(this);
+        spiral = new Spiral(this);
     }
 
     public void keyPressed(){
@@ -79,7 +81,7 @@ public class Rectangular extends Visual {
             popMatrix();
             angle += 0.01f;
 
-            //2nd box
+            //2nd box that will gradually move up the screen at the beginning
             pushMatrix();
             translate(right, upos, -400);
             rotateY(angle);
@@ -90,7 +92,6 @@ public class Rectangular extends Visual {
 
             if(upos >= top){
                 upos -= 1;
-                println(upos);
             }
 
             if(across){
@@ -126,6 +127,7 @@ public class Rectangular extends Visual {
                     
                     bands.render();
                     stars.render_stars();
+                    spiral.renderSpiral();
                 }
             }
         }else{
