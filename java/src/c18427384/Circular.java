@@ -77,8 +77,7 @@ public class Circular extends Visual {
             pushMatrix();
             translate(0, 0, -300);
             rotateX(angle);
-            rotateY(angle);
-            rotateY(angle);             
+            rotateY(angle);            
             sphere(sphereSize);
             popMatrix();
             angle += 0.01f;
@@ -97,8 +96,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(0, 0, -300);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);           
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;
@@ -114,8 +112,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(325, 0, -700);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);          
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;
@@ -127,8 +124,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(0, 0, -300);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);            
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;
@@ -144,8 +140,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(-325, 0, -700);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);           
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;
@@ -157,8 +152,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(0, 0, -300);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);         
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;
@@ -174,8 +168,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(0, -325, -700);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);       
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;          
@@ -188,8 +181,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(0, 0, -300);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);          
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;
@@ -205,8 +197,7 @@ public class Circular extends Visual {
         pushMatrix();
         translate(0, 325, -700);
         rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
+        rotateY(angle);          
         sphere(sphereSize);
         popMatrix();
         angle += 0.01f;
