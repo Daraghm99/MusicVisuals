@@ -19,7 +19,7 @@ public class Rectangular extends Visual {
     float top = height * 0.1f;
     float bottom = height * 20f;
 
-    rectBands abv;
+    rectBands bands;
 
     public void settings()
     {
@@ -35,7 +35,7 @@ public class Rectangular extends Visual {
         loadAudio("heroplanet.mp3");
         getAudioPlayer().play();
 
-        abv = new rectBands(this);
+        bands = new rectBands(this);
     }
 
     public void keyPressed(){
@@ -88,6 +88,7 @@ public class Rectangular extends Visual {
 
             if(upos >= top){
                 upos -= 1;
+                println(upos);
             }
 
             if(across){
@@ -121,7 +122,7 @@ public class Rectangular extends Visual {
                     popMatrix();
                     angle += 0.01f;
                     
-                    abv.render();
+                    bands.render();
                 }
             }
         }else{
@@ -162,7 +163,6 @@ public class Rectangular extends Visual {
             angle += 0.01f;
             
         }
-        abv.render();
 
     }
 
