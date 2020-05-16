@@ -16,7 +16,7 @@ public class rectBands {
         mv.noFill();
         mv.strokeWeight(2);
         mv.lights();
-        float gap = mv.width * 20f / (float) mv.getBands().length;
+        float gap = mv.width / (float) mv.getBands().length;
         for(int i = 0 ; i < mv.getBands().length; i ++)
         {
             mv.stroke(PApplet.map(mv.getSmoothedAmplitude(), 0, 1, 0, 255), 200, 255);
