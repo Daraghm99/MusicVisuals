@@ -7,8 +7,12 @@ import ie.tudublin.VisualException;
 public class Rectangular extends Visual {
 
     boolean up = false;
+    boolean down = false;
     float xpos;
-    float ypos = 100;
+    float ypos = 700;
+    float left = width * 0.1f;
+    float right = width * 20f;
+    float top = height * 0.1f;
 
     public void settings()
     {
@@ -29,6 +33,9 @@ public class Rectangular extends Visual {
         if(key == '1'){
             up = ! up;
         }
+        if(key == '2'){
+            down = ! down;
+        }
     }
     
     float angle = 0;
@@ -46,40 +53,76 @@ public class Rectangular extends Visual {
         background(0);
         noFill();
         lights();
-        camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
+        //camera(0, 0, 0, 0, 0, -1, 0, 1, 0);
         stroke(map(getSmoothedAmplitude(), 0, 1, 0, 255), 255, 255);
-        float boxSize = 100 + (200 * getAmplitude());
-        float sphereSize = 50 + (100 * getAmplitude());
+        float boxSize = 200 + (200 * getAmplitude());
 
         if(up){
             
+            //Box that will gradually move up the screen 
             pushMatrix();
-            translate(-100, ypos, -400);
+            translate(left, ypos, -400);
+            rotateY(angle);
+            rotateX(angle);
             box(boxSize);
             popMatrix();
-            
-            if(ypos > -200){
+            angle += 0.01f;
+
+            //2nd box
+            pushMatrix();
+            translate(right, ypos, -400);
+            rotateY(angle);
+            rotateX(angle);
+            box(boxSize);
+            popMatrix();
+            angle += 0.01f;
+
+            if(ypos >= top){
                 ypos -= 1;
-            }      
+            }
+
+        if(down){
+            ypos = 0;
+            pushMatrix();
+            translate(left, ypos, -400);
+            rotateY(angle);
+            rotateX(angle);
+            box(boxSize);
+            popMatrix();
+            angle += 0.01f;
+
+            pushMatrix();
+            translate(right, ypos, -400);
+            rotateY(angle);
+            rotateX(angle);
+            box(boxSize);
+            popMatrix();
+            angle += 0.01f;
+
+            if(ypos <= 800){
+                ypos += 1;
+            }
+
+        }      
         }
         else{
             //Drawing an initial Box
-        pushMatrix();
-        translate(-100, 100, -400);
-        rotateY(angle);
-        rotateX(angle);
-        box(boxSize);
-        popMatrix();
+            pushMatrix();
+            translate(left, 800, -400);
+            rotateY(angle);
+            rotateX(angle);
+            box(boxSize);
+            popMatrix();
+            angle += 0.01f;
 
-        //Drawing an initial sphere
-        pushMatrix();
-        translate(-150, 150, -600);
-        rotateX(angle);
-        rotateY(angle);
-        rotateY(angle);             
-        sphere(sphereSize);
-        popMatrix();
-        angle += 0.01f;
+            pushMatrix();
+            translate(right, 800, -400);
+            rotateY(angle);
+            rotateX(angle);
+            box(boxSize);
+            popMatrix();
+            angle += 0.01f;
+            
         }
 
     }
