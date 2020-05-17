@@ -37,7 +37,7 @@ public class Rectangular extends Visual {
     float bottom = height * 20f;
 
     //Used so we can call our render methods from other classes
-    rectBands bands;
+    boxBands bands;
     Stars stars;
     Spiral spiral;
 
@@ -57,7 +57,7 @@ public class Rectangular extends Visual {
         loadAudio("heroplanet.mp3");
 
         //Initialising our class objects
-        bands = new rectBands(this);
+        bands = new boxBands(this);
         stars = new Stars(this);
         spiral = new Spiral(this);
     }
@@ -176,6 +176,18 @@ public class Rectangular extends Visual {
                         rotateY(angle);        
                         sphere(sphereSize);
                         popMatrix();
+
+                        //Double cube in the top middle of the screen
+                        for(int i = 1; i <= 2; i++){
+                            pushMatrix();
+                            translate(1000, top - 0.2f, -600);
+                            rotateX(angle);
+                            rotateY(angle);        
+                            box(boxSize - i * 50);
+                            popMatrix();
+                        }
+
+
                     }
     
                     //Calling our render method from the boxBands Class
