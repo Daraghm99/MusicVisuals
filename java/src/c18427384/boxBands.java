@@ -11,6 +11,7 @@ public class boxBands {
         this.r = r; 
     }
 
+    //This method gets called in the Rectangular Class
     public void render()
     {
         r.noFill();
