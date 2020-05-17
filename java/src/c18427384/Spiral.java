@@ -21,7 +21,7 @@ public class Spiral {
         for(int i = 0;i < 100;i++){
             float x = PApplet.cos(theta) * radius;
             float y = PApplet.sin(theta) * radius;
-            r.ellipse(x, y, 3, r.getSmoothedAmplitude());
+            r.ellipse(x, y, 4, r.getSmoothedAmplitude());
             theta += thetaInc; 
         }
 
@@ -30,7 +30,7 @@ public class Spiral {
         for(int i = 0;i < 100;i++){
             float x = PApplet.cos(theta) * radius;
             float y = PApplet.sin(theta) * radius;
-            r.ellipse(x, y, 3, r.getSmoothedAmplitude());
+            r.ellipse(x, y, 4, r.getSmoothedAmplitude());
             theta += thetaInc; 
         }
     }
