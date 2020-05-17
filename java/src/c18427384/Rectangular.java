@@ -4,7 +4,8 @@
     of audio.
 
     Author : Daragh Murnane
-    Student Number : C18427384  
+    Student Number : C18427384
+    Compiler Used: Visual Studio Code  
 
 */
 
@@ -99,7 +100,6 @@ public class Rectangular extends Visual {
         float sphereSize = 50 + (100 * getAmplitude());
         //When the user presses spacebar start will become true
         if(start){
-            
             //Box that will gradually move up the screen 
             pushMatrix();
             translate(left, upos, -400);
@@ -158,15 +158,26 @@ public class Rectangular extends Visual {
                     popMatrix();
                     angle += 0.01f;
 
+                    //When the amplitude is over 0.1, two spheres will get drawn to the screen
                     if(getSmoothedAmplitude() > 0.1){
-                        println(getSmoothedAmplitude());
+                        //println(getSmoothedAmplitude());
+                        //Sphere will appear inside the right-sided box at the top when thae amplitude goes above 0.1 
                         pushMatrix();
-                        translate(right, top, -400);        
+                        translate(right, top, -400);
+                        rotateX(angle);
+                        rotateY(angle);        
+                        sphere(sphereSize);
+                        popMatrix();
+
+                        //Sphere will appear inside the left-sided box at the top when thae amplitude goes above 0.1 
+                        pushMatrix();
+                        translate(left, top, -400);
+                        rotateX(angle);
+                        rotateY(angle);        
                         sphere(sphereSize);
                         popMatrix();
                     }
     
-                    
                     //Calling our render method from the boxBands Class
                     bands.render();
                     //Calling our render method from the Stars Class

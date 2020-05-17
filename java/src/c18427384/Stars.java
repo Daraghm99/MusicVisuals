@@ -13,7 +13,6 @@ public class Stars {
 
 
     void render_stars(){
-        
         for(int i = 1; i < stars.length; i++) {
             r.fill(255);
             r.stroke(PApplet.map(r.getAmplitude(), 0, 1, 0, 255), 255, 255);
