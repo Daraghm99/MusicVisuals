@@ -12,12 +12,62 @@ Student Number: C18427384
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet
 
 # Description of the assignment
+Our goal for this assignment was to create "Something beautiful to enjoy while listening to music".
+We could create something that responded to a singular piece of music or the music that was playing at the
+time. We were given some starter code with examples that I forked and created my own package that is named my 
+Student Number. To complete this assignment and create my audio visualizer I looked over the examples we did 
+in class and did some self directed learning aswell to get the most out of this assignment.
 
 # Instructions
+I wanted this to be a simple audio visualizer without many controls, when the user presses the spacebar the music will
+start playing and two cubes will start to rise, The final instruction to get the most out of this visualizer is to press
+the '1' on your keyboard to get all the effects on the screen. These are done by using the KeyPressed method in the Rectangular
+class
 
 # How it works
+- To start this assignment I laid out a goal I was trying to reach and would reach by the end, 
+I wanted to delve into 3D objects and in particular how they move and respond to movement.
+- Rectangular is my main class in the programme controls how the 3D shapes move. Once the spacebar is pushed by the user, start
+will equate to true and the music will start playing and the two cubes will rise to the top of the screen
+- The user can push '1' at any time which gives the user a certain freedom over how and when they want the visualastions to display
+to the screen. 
+- When '1' is pushed two spheres will start at either side of the screen. I wanted there to be a certain anticipation by the user so they are drawn
+in and want to see what happens when the two spheres meet in the middle.
+- When the two spheres meet a box is created that encapsulates the two of them inside. Each shapes size is responding to the amplitude of the 
+audio that is playing 
+- I looked over the examples for WaveForm and AudioBandsVisual to see how to call methods from other classes that were not subclasses of PApplet.
+- Once the spheres collide there are 3 methods called, boxBands which displays the frequency bands to the screen in an aesthethic way using boxes.
+The boxes grow and shrink based on the frequency bands while the stroke changes colour based on the amplitude. The fill for these boxes is set based on the length of the 
+bands.
+- The spiral render method creates two spirals each in the middle left and middle right. This is done by panning at 100 ellipses. these miniture ellipses change colour
+based on the amplitude and when everything is running together look very nice as the user can see the colour of each individual ellipse.
+- I wanted to bring in the theme of space to this assignment and to do this I created the Star class. When the render method in Star gets called it uses a for loop and an array list to output
+the 'stars' which are miniture ellipses to the screen. This is a very relaxing method and is very easy to watch on the screen as everything is taking place. These ellipses also change colour based 
+on the amplitude of the song
+- As the amplitude increases and decreases in the song the spheres and double cube at the top of the screen will pop in and out of the screen. I really enjoyed creating this as I feel it adds a lot to the visualizer 
+as there is always something new happening on screen
+   
 
 # What I am most proud of in the assignment
+
+1.3D shapes: It was my goal during this assignment to learn more about 3D shapes in
+processing. At the end of the assignment I wanted to be able to make 3D objects move and respond to music, 
+I feel I have reached that goal and enjoyed the process of learning about boxes and spheres in processing.
+
+2.Colour: I enjoyed the colour of this assignment and creating it was very visually pleasing. By the end of the assignment i enjoyed the Sychronisity of having
+most of the shapes in the visualizer grow and shrink together while maintaining the same colour as eachother.
+I also enjoyed making a distinct difference in colour between some objects and others as | feel it brings a deal of contrast to the visualizer
+
+3.Collision: My favourite part of creating this assignment was when I was animating the collision between the two sphere objects, I feel that it was interesting creating
+this animation as most of the onscreen methods are not called until this takes place. This places a great deal of importance on this animation as there has to be enough 
+visually pleasing elements on screen after which I think I managed to do which I am proud of.
+
+4.Spiral&Stars: The reason I am proud of the spiral method is because at the start I was really struggling getting anything working on the screen, because of this I sat down and
+did some self-learning aswell as looking over the examples I was able to start getting things working and moving onto more advanced 3D shapes. I am also proud of the star method and how it looks
+as it feels when you are playing a song and zoning out that you are flying through space.  
+
+#YoutubeVideo
+
 
 # Markdown Tutorial
 
