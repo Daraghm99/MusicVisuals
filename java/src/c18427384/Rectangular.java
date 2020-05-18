@@ -182,6 +182,7 @@ public class Rectangular extends Visual {
                             popMatrix();
                         }
 
+                        //Sphere which will be inside the double cube if the amplitude goes over 0.1
                         pushMatrix();
                         translate(1000, top - 125, -1000);
                         rotateX(angle);
@@ -220,8 +221,7 @@ public class Rectangular extends Visual {
             pushMatrix();
             translate(left, height/2, -300);
             rotateX(angle);
-            rotateY(angle);
-            rotateY(angle);             
+            rotateY(angle);           
             sphere(sphereSize);
             popMatrix();
         
@@ -229,12 +229,12 @@ public class Rectangular extends Visual {
             pushMatrix();
             translate(right, height/2, -300);
             rotateX(angle);
-            rotateY(angle);
-            rotateY(angle);             
+            rotateY(angle);         
             sphere(sphereSize);
             popMatrix();
             angle += 0.01f;   
         }
+    //Incrementing the angle of rotation for our shapes      
     angle += 0.03f;            
     }
 
